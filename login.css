@@ -1,0 +1,166 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0px;
+}
+
+header{
+	background-color: rgb(111, 200, 255);
+	height:100px;
+	margin-left: 0px;
+	padding: 0px;
+
+}
+
+header ul li a{
+    color: black;
+	text-decoration: none;
+	font-size: 16px;
+	margin:10px;
+}
+a{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	margin:10px;
+}
+  
+a:hover {
+	color: #fd7e14;
+}
+
+#left-nav{
+	float:left;
+
+
+}
+#left-nav li{
+	display: inline-block;
+
+}
+#left-nav li a{
+	display: inline-block;
+	font-size: 30px;
+}
+
+ul li{
+	list-style-type: none;
+}
+
+#right-nav{
+	float: right;
+	padding: 25px;
+	margin-right: 50px;
+}
+
+#right-nav li{
+	display: inline-block;
+	margin:10px;
+}
+
+
+form{
+	width: 50%;
+	margin:100px auto;
+}
+form div{
+	margin:3px auto;
+}
+
+.textinput{
+	margin-top: 2px;
+	height: 35px;
+	border:1px solid gray;
+	font-size: 16px;
+	padding: 0px;
+	width:100%;
+	border-radius: 5px;
+}
+
+.btn{
+	padding:10px;
+	width: 42%;
+	background-color: olivedrab;
+	font-size: 16px;	
+}
+
+
+
+
+/*footer*/
+.footer{
+	bottom: 0;
+	width: 100%;
+	/*height: 127px;*/
+	background-color: rgb(111, 200, 255);
+}
+
+.footer > .container a{
+	width: 50px;
+	height: 50px;
+	background-color: blueviolet;
+}
+
+.footer > .container a:hover{
+	color: maroon;
+}
+
+
+.container li{
+	display: inline-block;
+}
+
+.container a {
+	float: left;
+	padding: 8px 12px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.lefttext{
+	padding: 18px;
+	padding-left: 145px;
+}
+
+
+.btnspace1{
+	padding: 6px 11px 6px 11px;
+	width: 80px;
+	margin: 3px 0px 0px -15px;
+	font-size: 17px;
+}
+.btnspace2{
+	color: #e9ecef;
+	padding: 10px 16px 5px 13px;
+	width: 85px;
+	margin: 3px -15px 0px 0;
+	background: brown;
+	height: 39px;
+}
+
+.pwd{
+	padding-top: 40px;
+    margin-left: -16px;
+}
+
+.backbtn{
+	background-color:orangered;
+ 	color: black;
+}
+
+.backbtn a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.backbtn a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
