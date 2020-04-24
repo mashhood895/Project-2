@@ -1,0 +1,45 @@
+<% include header.ejs %>
+<link rel="stylesheet" href="css/login.css">
+<script type="text/javascript" src="js/login.js"></script>
+<%if(msg!=''){%>
+  <div class="alert alert-danger col-xs-6" id="flash_msg_dashboard" style="z-index: 999999;"><h5><center><%= msg%></center></h5></div>
+<%} %>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container border" style="background-color: lightgray; width:36%;" >
+      <h2 style="margin: 0 0 0 154px;">Login</h2>
+
+      <form method="post" action ="/login_user">
+        <div class="form-group" method="post" style="margin: -71px 1px 2px 2px;">
+          <label for="exampleInputEmail1">Login ID:</label>
+          <input type="email" class="form-control textinput" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password:</label>
+          <input type="password" class="form-control textinput" name="password" id="exampleInputPassword1" placeholder="Password " required>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+        </div>
+        <div class="container">
+          <input name="Submit1" type="submit" class="btn btn-info col-6 float-left btnspace1"  value="Login"/>
+          <a href="/register" class="btn btn-success col-6 float-right btnspace2">Sign up</a> 
+          <br>
+          <br>
+          <div class="pwd">
+            <p for="exampleInputEmail1">Forgot password?</p>
+            <div>
+              <br>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <% include footer.ejs %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    setTimeout(() => {
+       $("#flash_msg_dashboard").fadeOut('slow');
+     },3000);
+</script>
