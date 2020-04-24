@@ -1,0 +1,58 @@
+<% include header.ejs %>
+<link rel="stylesheet" href="css/appointment.css">
+    <script src="js/appointment.js"></script>
+    <%if(msg!=''){%>
+      <div class="alert alert-danger col-xs-6" id="flash_msg_dashboard" style="z-index: 999999;"><h5><center><%= msg%></center></h5></div>
+    <%} %>
+<div class="main">
+    <section>
+      <div class="booking">
+        <h3>Book an Appointment</h3>
+        <form method="post" name="booking" class="contactForm" action="/booking_send">
+          <div class="customform">
+            <input class="input-appointment" type="text" name="username" id="name" placeholder="Enter UserName" required>
+            <input class="input-appointment" type="text" name="confederation" id="streetno" placeholder="Enter a Name confederation" required>
+            <input class="input-appointment" type="text" name="city" id="city" placeholder="Enter the city name Thunder Bay" required>
+            <input class="input-appointment" type="text" name="doct_name" id="speciality" placeholder="Enter a name Doctor" required>
+            <input class="input-appointment" type="datetime-local" name="dob" id="dob&time" placeholder="Date of birth" required><br>
+            <button type="submit" class="btn btn-primary">Book</button>
+          </div>
+        </form></div>
+      </section>
+      <aside class="right">
+        <div class="doctorlist">
+          <div>
+            <h3>Doctors List</h3><br><br>
+            <h5 class="heading">Anesthesiologists</h5>
+            <p>An anesthesiologist is a specialist who gives a anesthesia to the patient before going to the surgery of medical procedure. 
+            </p>
+            <p>
+              <a href="#" class="btn btn-link">Read more</a>
+            </p>
+          </div>
+          <div>
+            <h5 class="heading">Cardiologists</h5>
+            <p>A cardiac surgeon check the all heart problem and diagnose the patient and perform the open hearth surgery for the heart patient.
+            </p>
+            <p>
+              <a href="#" class="btn btn-link">Read more</a>
+            </p>
+          </div>
+          <div>
+            <h5 class="heading">Allergists/Immunologists</h5>
+            <p>Diagnose the all type of allergies and advice person  that how to improve the immune system.
+            </p>
+            <p>
+              <a href="#" class="btn btn-link">Read more</a>
+            </p>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <% include footer.ejs %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      setTimeout(() => {
+         $("#flash_msg_dashboard").fadeOut('slow');
+       },3000);
+  </script>

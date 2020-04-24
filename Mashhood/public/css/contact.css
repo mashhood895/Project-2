@@ -1,0 +1,175 @@
+body{
+
+}
+
+header{
+  background-color: rgb(111, 200, 255);
+  height:100px;
+  margin-left: 0px;
+  padding: 0px;
+
+}
+
+header ul li a{
+    color: black;
+  text-decoration: none;
+  font-size: 16px;
+  margin:10px;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin:10px;
+}
+  
+a:hover {
+  color: #fd7e14;
+}
+
+#left-nav{
+	float:left;
+
+
+}
+#left-nav li{
+	display: inline-block;
+
+}
+#left-nav li a{
+	display: inline-block;
+		font-size: 30px;
+}
+
+ul li{
+	list-style-type: none;
+}
+
+#right-nav{
+	float: right;
+  padding: 25px;
+  margin-right: 50px;
+}
+
+#right-nav li{
+	display: inline-block;
+	margin:10px;
+}
+/*head end*/
+
+
+/*two side split*/
+section{
+  width: 50%;
+  float: left;
+  background: lightgray;
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.right{
+  width: 50%;
+  float: right;
+  padding-left: 5%;
+}
+
+.main{
+  margin: 0;
+  display: inline-flex;
+  width: 100%;    
+}
+.main::after{
+  content: "";
+  clear:both;
+  display: table;
+}
+
+
+input[type=submit] {
+  position: relative;
+  left:-5px;
+  width: 23%;
+  height: 40px;
+  background-color: #45a049;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  /*background:#ffc107;*/
+  color: #fff;
+}
+input[type=submit]:hover {
+  background-color: #black;
+}
+.btn{
+  background-color: white;
+}
+
+
+/*feedback style*/
+.rating{
+ color: goldenrod;
+ font-size: 2.0rem;
+}
+.rating::before{
+ content: '\2606';
+ cursor: pointer;
+}
+.rating.rated::before{
+ /* rates filling */
+ content: '\2605';  
+}
+
+.ratings{
+ counter-reset: rateme 0;   
+ font-size: 1.0rem;
+ font-weight: 900;
+}
+.rating.rated{
+ counter-increment: rateme 1;
+}
+.ratings::after{
+ content: counter(rateme) '/5';
+}
+.feedback{
+  margin-left: 17px;
+}
+/*style end*/
+
+
+/*Footer style*/
+.footer{
+  bottom: 0;
+  width: 100%;
+  /*height: 127px;*/
+  background-color: rgb(111, 200, 255);
+}
+
+.footer > .container a{
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+}
+
+.footer > .container a:hover{
+  color: maroon;
+}
+
+
+.container li{
+  display: inline-block;
+}
+
+.container a {
+  float: left;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.lefttext{
+  padding: 18px;
+  padding-left: 145px;
+}
+/*footer end*/
+
+

@@ -1,0 +1,69 @@
+<% include header.ejs %>
+<link rel="stylesheet" href="css/contact.css">
+  <script type="text/javascript" src="js/contact.js"></script>
+  <%if(msg!=''){%>
+    <div class="alert alert-danger col-xs-6" id="flash_msg_dashboard" style="z-index: 999999;"><h5><center><%= msg%></center></h5></div>
+  <%} %>
+<div class="main">
+    <section>
+      <h3>Get in touch</h3>
+      <form method="POST"  class="contactForm needs-validation" action="/contact_send" onsubmit="return Validation()" novalidate>
+        <div>
+          <input type="text" class="form-control rounded col-8 my-2" name="name" id="first&lastname" placeholder="Full Name" maxlength="9" required>
+          <span id="fullname" style="color:red"></span>
+          <div class="invalid-feedback">Invalid name</div>
+        </div>
+        <div>
+          <input type="tel" class="form-control rounded col-8 my-2" name="phone" id="contact" placeholder="contact Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <span id="digit" style="color:red"></span>
+          <div class="invalid-feedback">Wrong Number</div>
+        </div>
+        <div>
+          <input type="email" class="form-control rounded col-8 my-2" name="email" id="emailaddress" placeholder="Email" required>
+          <span id="emailid" style="color:red"></span>
+          <div class="invalid-feedback">Please Enter correct Email ID</div>
+        </div>
+        <div>
+          <input type="text" class="form-control rounded col-8 my-2" name="subject" id="query" placeholder="Subject" maxlength="18" required>
+          <span id="headline" style="color:red"></span>
+          <div class="invalid-feedback">Please Write the your subject</div>
+        </div>
+        <div>
+          <textarea name="message" class="form-control rounded col-8 my-2" id="texting" cols="30" rows="7" placeholder="Write your text" ></textarea>
+          <span id="text" style="color:red"></span></div>
+          <div class="feedback">
+            <h6>Feedback Rating</h6>
+            <div class="ratings" data-rating="1">
+              <span class="rating">&nbsp;</span>
+              <span class="rating">&nbsp;</span>
+              <span class="rating">&nbsp;</span>
+              <span class="rating">&nbsp;</span>
+              <span class="rating">&nbsp;</span>
+            </div>
+            <input type="hidden" name ="rating" value='' id="rat">
+          </div>
+          <div>
+            <input type="submit" value="Send Message" class="btn btn-success">
+            <div class="submitting"></div>
+          </div><br>
+         
+      </form>
+    </section>
+    <aside class="right">
+      <h4>HELP LINE</h4>
+      <p>+1800-123-4567</p>
+      <br><br>
+      <h4>Location</h4>
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2648.769762597277!2d-89.27107898434168!3d48.40336447924552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d5921da47926843%3A0x952446f931e78fc7!2sConfederation%20College!5e0!3m2!1sen!2sca!4v1585793961122!5m2!1sen!2sca" width="450" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+      </div>
+    </aside>
+  </div>
+  <% include footer.ejs %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    setTimeout(() => {
+       $("#flash_msg_dashboard").fadeOut('slow');
+     },3000);
+</script>

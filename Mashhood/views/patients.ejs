@@ -1,0 +1,42 @@
+<% include header.ejs %>
+<link rel="stylesheet" href="css/data.css">
+<script type="text/javascript" src="js/patients.js"></script>
+<div class="jumbotron" >
+    <div class="container text-center">
+        <h1 class="display-8" style="color: green">Patient Entries</h1>
+    </div>
+<div class="entries">
+    <div class="input-group form-input">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-info text-dark">Name</span>
+      </div>
+      <input type="text" aria-label="First name" id="first" class="form-control">
+    </div>
+    <div class="input-group form-input">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-info text-dark">Age</span>
+      </div>
+      <input type="text" aria-label="First name" id="second" class="form-control">
+    </div>
+    <div class="input-group form-input">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-info text-dark">Address</span>
+      </div>
+      <input type="text" aria-label="First name" id="third" class="form-control">
+    </div>
+    <button onclick="add()" type="button" class="btn btn-success">Enter</button>
+  </div>
+  <table class="table table-bordered data-table"  id="myTable">
+    <thead class="bg-info text-dark">
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody id="data" class="bg-white"></tbody></tbody>
+  </table>
+  </div>
+  <% include footer.ejs %>
